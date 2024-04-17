@@ -34,7 +34,8 @@ var CriarTarefaComponent = /** @class */ (function () {
             id: this.idCampoIndividual = uuid_1.v4(),
             titulo: this.tituloTarefa,
             lista: this.itensCheckList,
-            data: this.diaAtual
+            data: this.diaAtual,
+            descricao: this.descricao
         });
         this.mensagemAlertaSucesso = true;
         localStorage.setItem("lista", JSON.stringify(this.tarefaCompleta));

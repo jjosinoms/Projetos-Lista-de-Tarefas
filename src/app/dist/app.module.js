@@ -24,8 +24,6 @@ var redes_sociais_component_1 = require("./components/redes-sociais/redes-sociai
 var routes = [
     { path: '', pathMatch: 'full', redirectTo: 'home' },
     { path: 'home', component: listar_tarefa_component_1.ListarTarefaComponent },
-    { path: 'criar', component: criar_tarefa_component_1.CriarTarefaComponent },
-    { path: 'editar', component: editar_tarefa_component_1.EditarTarefaComponent },
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {

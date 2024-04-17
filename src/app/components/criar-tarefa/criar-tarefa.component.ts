@@ -33,6 +33,7 @@ export class CriarTarefaComponent implements OnInit {
   campoCheckList: any;
   meuForm: any;
   mensagemErro: any
+  descricao : any
 
   constructor(
     private HttpClient: HttpClient, //inicializacao automatica
@@ -50,7 +51,8 @@ export class CriarTarefaComponent implements OnInit {
       id: this.idCampoIndividual = uuidv4(),
       titulo: this.tituloTarefa,
       lista: this.itensCheckList,
-      data: this.diaAtual
+      data: this.diaAtual,
+      descricao : this.descricao
 
     })
 

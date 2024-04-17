@@ -29,7 +29,18 @@
           [(ngModel)]="tituloTarefa"
         />
         <hr />
-        <br /><br />
+        <input
+        rows="10"
+        cols="1"
+        type="text"
+        class="form-control"
+        id="checkList"
+        name="checkList"
+        placeholder="Informe uma descrição para a tarefa...."
+        [(ngModel)]="descricao"
+      />
+      <hr>
+    
         <div>
           <div style="margin: 1%">
            
@@ -40,9 +51,10 @@
               class="form-control"
               id="checkList"
               name="checkList"
-              placeholder="Informe o nome para checklist...."
+              placeholder="Adicione um item na checklist...."
               [(ngModel)]="campoCheckList"
             />
+
             <a class="btn btn-primary" (click)="addCheckList()"
               >Add + Checklist
             </a>

@@ -18,8 +18,6 @@ import { RedesSociaisComponent } from './components/redes-sociais/redes-sociais.
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home'},
   { path: 'home', component: ListarTarefaComponent},
-  { path: 'criar', component: CriarTarefaComponent},
-  { path: 'editar', component: EditarTarefaComponent},
    
 ]
 @NgModule({
