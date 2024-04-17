@@ -1,0 +1,50 @@
+@if(criarPost == true){
+<div></div>
+<app-criar-tarefa></app-criar-tarefa>
+<div class="row">
+  <hr />
+  <h1>Sua Lista de Tarefas</h1>
+  <p></p>
+  @if (tarefas) {
+  <div
+    *ngFor="let tarefa of novaLista"
+    style="text-align: center; border-style: ridge"
+    class="col-md-4"
+  >
+    <div>
+      <p hidden>{{ tarefa.id }}</p>
+      <h4>Título da tarefa: {{ tarefa.titulo }}</h4>
+      <hr />
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tarefas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let checklist of novaLista;">
+            <div *ngFor="let i of listaSoParaTeste; let j = count">
+              <td><input type="checkbox" />{{ checklist.lista[i.numeroTeste] }}</td>
+            </div>
+          </tr>
+        </tbody>
+      </table>
+      <p>Data da tarefa: {{ tarefa.data }}</p>
+      <hr />
+
+      <button
+        (click)="excluirTarefa(tarefa)"
+        id="{{ tarefa.id }}"
+        style="margin: 1%"
+        class="btn btn-danger"
+      >
+        Excluir
+      </button>
+    </div>
+  </div>
+  }@else {
+  <p style="text-align: center">Lista Vazia</p>
+  }
+</div>
+
+}
