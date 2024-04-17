@@ -65,9 +65,10 @@ export class CriarTarefaComponent implements OnInit {
     this.tituloTarefa = ""
     this.itensCheckList = []
     this.campoCheckList = ""
+    this.descricao = ""
     setTimeout(() => {
       this.mensagemAlertaSucesso = false;
-    }, 1500);
+    }, 2000);
     this.ngOnInit()
   }
 

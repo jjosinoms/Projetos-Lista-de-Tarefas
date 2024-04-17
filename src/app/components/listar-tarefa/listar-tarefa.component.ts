@@ -33,19 +33,22 @@ export class ListarTarefaComponent implements OnInit {
   }
 
   mostrarLista() {
-    var dados = JSON.parse(localStorage.getItem("lista") as string);
-    this.tarefas.push(dados)
-    var qnt = JSON.parse(localStorage.getItem("tamanhoCheck") as string);
-    this.quantidadeCheckList = Number(qnt)
-    for(let i = 0; i < this.quantidadeCheckList; i++) {
-      this.listaSoParaTeste.add({numeroTeste:i})
-    }
-    for (let i = 0; i < this.tarefas.length; i++) {
-      console.log("tarefas: ", this.tarefas[i][0])
-      this.novaLista.add(this.tarefas[i][0])
-    }
+    setTimeout(() => {
+      var dados = JSON.parse(localStorage.getItem("lista") as string);
+      this.tarefas.push(dados)
+      var qnt = JSON.parse(localStorage.getItem("tamanhoCheck") as string);
+      this.quantidadeCheckList = Number(qnt)
+      for(let i = 0; i < this.quantidadeCheckList; i++) {
+        this.listaSoParaTeste.add({numeroTeste:i})
+      }
+      for (let i = 0; i < this.tarefas.length; i++) {
+        console.log("tarefas: ", this.tarefas[i][0])
+        this.novaLista.add(this.tarefas[i][0])
+      }
+  
+      this.ngOnInit();
+    },3000);
 
-    this.ngOnInit();
   }
 
   excluirTarefa(data: any) {

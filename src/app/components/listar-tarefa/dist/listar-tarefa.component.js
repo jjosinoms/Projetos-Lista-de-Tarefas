@@ -22,18 +22,21 @@ var ListarTarefaComponent = /** @class */ (function () {
         this.novaLista;
     };
     ListarTarefaComponent.prototype.mostrarLista = function () {
-        var dados = JSON.parse(localStorage.getItem("lista"));
-        this.tarefas.push(dados);
-        var qnt = JSON.parse(localStorage.getItem("tamanhoCheck"));
-        this.quantidadeCheckList = Number(qnt);
-        for (var i = 0; i < this.quantidadeCheckList; i++) {
-            this.listaSoParaTeste.add({ numeroTeste: i });
-        }
-        for (var i = 0; i < this.tarefas.length; i++) {
-            console.log("tarefas: ", this.tarefas[i][0]);
-            this.novaLista.add(this.tarefas[i][0]);
-        }
-        this.ngOnInit();
+        var _this = this;
+        setTimeout(function () {
+            var dados = JSON.parse(localStorage.getItem("lista"));
+            _this.tarefas.push(dados);
+            var qnt = JSON.parse(localStorage.getItem("tamanhoCheck"));
+            _this.quantidadeCheckList = Number(qnt);
+            for (var i = 0; i < _this.quantidadeCheckList; i++) {
+                _this.listaSoParaTeste.add({ numeroTeste: i });
+            }
+            for (var i = 0; i < _this.tarefas.length; i++) {
+                console.log("tarefas: ", _this.tarefas[i][0]);
+                _this.novaLista.add(_this.tarefas[i][0]);
+            }
+            _this.ngOnInit();
+        }, 3000);
     };
     ListarTarefaComponent.prototype.excluirTarefa = function (data) {
         if (window.confirm("Deseja excluir essa tarefa?")) {

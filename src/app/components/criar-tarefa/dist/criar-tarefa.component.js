@@ -44,9 +44,10 @@ var CriarTarefaComponent = /** @class */ (function () {
         this.tituloTarefa = "";
         this.itensCheckList = [];
         this.campoCheckList = "";
+        this.descricao = "";
         setTimeout(function () {
             _this.mensagemAlertaSucesso = false;
-        }, 1500);
+        }, 2000);
         this.ngOnInit();
     };
     CriarTarefaComponent.prototype.removerCheckList = function (item) {
