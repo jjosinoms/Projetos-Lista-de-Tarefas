@@ -14,16 +14,14 @@ var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/common/http");
-var criar_tarefa_component_1 = require("./components/criar-tarefa/criar-tarefa.component");
-var listar_tarefa_component_1 = require("./components/listar-tarefa/listar-tarefa.component");
-var editar_tarefa_component_1 = require("./components/editar-tarefa/editar-tarefa.component");
 var rodape_component_1 = require("./components/rodape/rodape.component");
 var navbar_component_1 = require("./components/navbar/navbar.component");
 var redes_sociais_component_1 = require("./components/redes-sociais/redes-sociais.component");
+var tarefas_component_1 = require("./components/tarefas/tarefas.component");
 // mapeamento das rotas do projeto
 var routes = [
     { path: '', pathMatch: 'full', redirectTo: 'home' },
-    { path: 'home', component: listar_tarefa_component_1.ListarTarefaComponent },
+    { path: 'home', component: tarefas_component_1.TarefasComponent },
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -32,12 +30,10 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 app_component_1.AppComponent,
-                criar_tarefa_component_1.CriarTarefaComponent,
-                listar_tarefa_component_1.ListarTarefaComponent,
-                editar_tarefa_component_1.EditarTarefaComponent,
                 rodape_component_1.RodapeComponent,
                 navbar_component_1.NavbarComponent,
-                redes_sociais_component_1.RedesSociaisComponent
+                redes_sociais_component_1.RedesSociaisComponent,
+                tarefas_component_1.TarefasComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
